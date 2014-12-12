@@ -16,4 +16,6 @@ if ! [ -d ${HOME}/awstools/${EB_BASE} ]; then
 fi
 
 sudo ln -fs ${HOME}/awstools/${EB_BASE}/eb/linux/python2.7/eb ${HOME}/bin/
-sudo ln -fs ${HOME}/awstools/${EB_BASE}/AWSDevTools/Linux/AWSDevTools-RepositorySetup.sh ${HOME}/bin/
+
+cd $HOME/${CIRCLE_PROJECT_REPONAME}
+bash -ex ${HOME}/awstools/${EB_BASE}/AWSDevTools/Linux/AWSDevTools-RepositorySetup.sh
