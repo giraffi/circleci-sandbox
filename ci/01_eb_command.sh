@@ -6,6 +6,8 @@ EB_BASE="AWS-ElasticBeanstalk-CLI-${EB_VERSION}"
 
 sudo pip install boto
 
+cd /home/ubuntu
+
 if ! [ -d /home/ubuntu/${EB_BASE} ]; then
   wget https://s3.amazonaws.com/elasticbeanstalk/cli/${EB_BASE}.zip
   unzip ${EB_BASE}.zip
