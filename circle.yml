@@ -2,6 +2,5 @@
 dependencies:
   pre:
     - ci/01_eb_command.sh
-    - sudo chef-apply ci/recipe_set_eb_credentials.rb
   cache_directories:
     - ~/awstools
