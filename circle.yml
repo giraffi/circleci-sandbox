@@ -7,7 +7,7 @@ dependencies:
 test:
     override:
         - hoge=`date` && echo ${hoge}
-        - date > /tmp/date/txt
+        - date > /tmp/date.txt
         - echo ${hoge}
-        - echo `cat /tmp/date/txt`
+        - echo `cat /tmp/date.txt`
 
