@@ -4,3 +4,9 @@ dependencies:
     - ci/01_eb_command.sh
   cache_directories:
     - ~/awstools
+test:
+    override:
+        - hoge=`date`
+        - echo $hoge
+        - echo $hoge
+
