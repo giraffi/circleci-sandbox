@@ -6,7 +6,8 @@ dependencies:
     - ~/awstools
 test:
     override:
-        - hoge=`date`
-        - echo $hoge
-        - echo $hoge
+        - hoge=`date` && echo ${hoge}
+        - date > /tmp/date/txt
+        - echo ${hoge}
+        - echo `cat /tmp/date/txt`
 
