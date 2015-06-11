@@ -1,13 +1,14 @@
 ---
-dependencies:
-  pre:
-    - ci/01_eb_command.sh
-  cache_directories:
-    - ~/awstools
+#dependencies:
+  #  pre:
+  #  - ci/01_eb_command.sh
+  #cache_directories:
+  #  - ~/awstools
 test:
     override:
-        - hoge=`date` && echo ${hoge}
-        - date > /tmp/date.txt
-        - echo ${hoge}
-        - echo `cat /tmp/date.txt`
+      - hoge=`date` && echo ${hoge}:
+        timeout: 240
+      - date > /tmp/date.txt
+      - echo ${hoge}
+      - echo `cat /tmp/date.txt`
 
