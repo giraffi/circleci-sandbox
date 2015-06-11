@@ -5,10 +5,10 @@
   #cache_directories:
   #  - ~/awstools
 test:
-    override:
-      - hoge=`date` && echo ${hoge}:
-        timeout: 240
-      - date > /tmp/date.txt
-      - echo ${hoge}
-      - echo `cat /tmp/date.txt`
+  timeout: 240
+  override:
+    - hoge=`date` && echo ${hoge}
+    - date > /tmp/date.txt
+    - echo ${hoge}
+    - echo `cat /tmp/date.txt`
 
