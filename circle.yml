@@ -1,6 +1,7 @@
 ---
 test:
   override:
-    - bash -c 'for x in {1..1000} ; do echo -n "." ; sleep 1 ; done' &
-    - /bin/true
+    - until [ -f ./fin ] ; do echo -n "." ; sleep 2 ; done &
+    - sleep 180
+    - touch fin
 
