@@ -1,7 +1,8 @@
 ---
 test:
   override:
-    - bash -c 'until [ -f ./fin ] ; do echo "." ; sleep 2 ; done' &
+    - "until [ -f ./fin ] ; do echo "." ; sleep 2 ; done &":
+      background: true
     - sleep 610
     - touch fin
 
