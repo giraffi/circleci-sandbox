@@ -1,7 +1,7 @@
 ---
 test:
   override:
-    - until [ -f ./fin ] ; do echo -n "." ; sleep 2 ; done &
-    - sleep 180
+    - until [ -f ./fin ] ; do echo "." ; sleep 2 ; done &
+    - sleep 610
     - touch fin
 
