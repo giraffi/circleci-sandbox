@@ -1,8 +1,8 @@
 ---
 test:
   override:
-    - "until [ -f ./fin ] ; do echo "." ; sleep 2 ; done &":
-      background: true
+    - 'until [ -f ./fin ] ; do echo "." ; sleep 2 ; done &':
+          background: true
     - sleep 610
     - touch fin
 
