@@ -10,7 +10,7 @@ deployment:
     commands:
       - ci/99_sync_bitbucket.sh
   all_tags:
-    tags: /.*/
+    tag: /.*/
     commands:
       - ci/99_sync_bitbucket.sh
 
