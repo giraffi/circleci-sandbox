@@ -9,7 +9,7 @@ EOL
 
 git remote add bitbucket `git remote get-url origin | sed 's/github.com/bitbucket.org/'`
 git remote prune origin
-git fetch origin --tags
+git fetch origin --tags --prune
 git push bitbucket --mirror --prune
 git push bitbucket --tags
 git remote prune bitbucket
