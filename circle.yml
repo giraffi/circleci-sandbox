@@ -4,4 +4,9 @@ test:
     - bash -c 'until [ -f ./fin ] ; do echo "." ; sleep 2 ; done &'
     - sleep 10
     - touch fin
+deployment:
+  all:
+    branch: *
+    commands:
+      - ci/99_sync_bitbucket.sh
 
