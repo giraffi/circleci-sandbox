@@ -9,7 +9,9 @@ IdentitiesOnly yes
 IdentityFile /home/ubuntu/.ssh/id_circleci_github
 EOL
 
-git remote add bitbucket `git remote get-url origin | sed 's/github.com/bitbucket.org/'`
+if ! git remote | grep -q bitbucket ; then
+  git remote add bitbucket `git remote get-url origin | sed 's/github.com/bitbucket.org/'`
+fi
 git fetch origin --prune
 for tag in `git tag` ; do git tag -d $tag ; done
 git fetch origin --tags --prune
