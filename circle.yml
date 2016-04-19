@@ -6,7 +6,8 @@ test:
     - touch fin
 deployment:
   all:
-    branch: *
+    branch: /*/
+    tags: /*/
     commands:
       - ci/99_sync_bitbucket.sh
 
