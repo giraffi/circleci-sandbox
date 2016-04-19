@@ -5,9 +5,13 @@ test:
     - sleep 10
     - touch fin
 deployment:
-  all:
-    branch: /*/
-    tags: /*/
+  all_branches:
+    branch: /.*/
     commands:
       - ci/99_sync_bitbucket.sh
+  all_tags:
+    tags: /.*/
+    commands:
+      - ci/99_sync_bitbucket.sh
+
 
