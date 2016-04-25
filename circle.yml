@@ -1,17 +1,10 @@
 ---
+---
+machine:
+  python:
+    version: 2.7
 test:
   override:
     - bash -c 'until [ -f ./fin ] ; do echo "." ; sleep 2 ; done &'
     - sleep 10
     - touch fin
-deployment:
-  all_branches:
-    branch: /.*/
-    commands:
-      - ci/99_sync_bitbucket.sh
-  all_tags:
-    tag: /.*/
-    commands:
-      - ci/99_sync_bitbucket.sh
-
-
