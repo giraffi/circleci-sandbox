@@ -2,7 +2,8 @@
 version: 2
 executorType: docker
 containerInfo:
-  - image: golang:1.7
+  - image: alpine:latest
+    cmd: ["sleep", "180"]
 stages:
   build:
     workDir: ~/my-project
