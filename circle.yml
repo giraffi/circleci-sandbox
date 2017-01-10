@@ -7,7 +7,13 @@ stages:
     steps:
       - type: checkout
       - type: shell
+        name:Invesgate Envirnments
+        command: |
+          id
+          ls -ar ~/
+      - type: shell
         name: Verify Docker Works
         command: |
           docker version
           docker run ubuntu /bin/echo "Hello world"
+          
