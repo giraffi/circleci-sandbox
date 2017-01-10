@@ -2,7 +2,7 @@
 version: 2
 executorType: docker
 containerInfo:
-  - image: alpine:latest
+  - image: golang:1.7
 stages:
   build:
     workDir: ~/my-project
