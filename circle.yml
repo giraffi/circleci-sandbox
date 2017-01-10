@@ -3,15 +3,11 @@ version: 2
 executorType: docker
 containerInfo:
   - image: alpine:latest
-    cmd: ["sleep", "180"]
+    cmd: ["apk", "add", "--update", "git", ";", "sleep", "180"]
 stages:
   build:
     workDir: ~/my-project
     steps:
-      - type: shell
-        name: Install git
-        command: |
-          apk add --update git
       - type: checkout
       - type: shell
         name: Install Docker Client
