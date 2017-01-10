@@ -8,7 +8,10 @@ stages:
       - type: checkout
       - type: shell
         name: Can I use Env ?
-        command: echo $GREAT_KEY
+        command: |
+          echo $GREAT_KEY
+          apk add --update ruby
+          ruby -e 'puts ENV.keys'
       - type: shell
         name: Verify Docker Works
         command: |
