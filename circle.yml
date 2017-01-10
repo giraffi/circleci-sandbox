@@ -1,14 +1,13 @@
 ---
 version: 2
-executorType: docker
-containerInfo:
-  - image: python:2.7.12
+executorType: machine
 stages:
   build:
-    workDir: /home/ubuntu/canary-python
-    environment:
-      - FOO: "bar"
+    workDir: ~/my-project
     steps:
       - type: checkout
       - type: shell
-        command: echo "When I say Foo... You say $FOO"
+        name: Verify Docker Works
+        command: |
+          docker --version
+          docker run ubuntu /bin/echo "Hello world"
