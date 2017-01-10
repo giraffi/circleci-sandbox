@@ -3,7 +3,7 @@ version: 2
 executorType: docker
 containerInfo:
   - image: alpine:latest
-    cmd: ["apk", "add", "--update", "git"]
+    cmd: [""]
 stages:
   build:
     workDir: ~/my-project
