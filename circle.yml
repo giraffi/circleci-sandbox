@@ -6,9 +6,9 @@ containerInfo:
     cmd: [""]
 stages:
   build:
-    workDir: ~/my-project
+    workDir: ~/
     steps:
-      - type: checkout
+#       - type: checkout
       - type: shell
         name: Install Docker Client
         command: |
