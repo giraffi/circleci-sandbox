@@ -7,6 +7,9 @@ stages:
     steps:
       - type: checkout
       - type: shell
+        name: Can I use Env ?
+        command: echo $GREAT_KEY
+      - type: shell
         name: Verify Docker Works
         command: |
           docker version
