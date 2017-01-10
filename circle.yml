@@ -9,5 +9,5 @@ stages:
       - type: shell
         name: Verify Docker Works
         command: |
-          docker --version
+          docker version
           docker run ubuntu /bin/echo "Hello world"
