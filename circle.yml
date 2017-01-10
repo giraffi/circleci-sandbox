@@ -12,3 +12,8 @@ stages:
           docker version
           docker build -t myp .
           docker run myp /bin/true
+          mkdir images
+          docker save -o images/myp myp
+      - type: artifacts-store
+        path: images/myp
+        destination: prefixer
