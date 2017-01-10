@@ -8,7 +8,11 @@ stages:
   build:
     workDir: ~/my-project
     steps:
-#      - type: checkout
+      - type: shell
+        name: Install git
+        command: |
+          apk add --update git
+      - type: checkout
       - type: shell
         name: Install Docker Client
         command: |
