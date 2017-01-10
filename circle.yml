@@ -10,6 +10,7 @@ stages:
     steps:
 #       - type: checkout
       - type: shell
+        shell: /bin/sh
         name: Install Docker Client
         command: |
           mkditr -p /root/my-project
@@ -24,6 +25,7 @@ stages:
       - type: setup-docker-engine
       - type: shell
         name: Verify Docker Works
+        shell: /bin/sh
         command: |
           docker --version
           docker run ubuntu /bin/echo "Hello world"
