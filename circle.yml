@@ -15,5 +15,5 @@ stages:
           mkdir images
           docker save -o images/myp myp
       - type: artifacts-store
-        path: images/myp
+        path: images/
         destination: prefixer
