@@ -8,7 +8,7 @@ stages:
   build:
     workDir: ~/my-project
     steps:
-      - type: checkout
+#      - type: checkout
       - type: shell
         name: Install Docker Client
         command: |
